@@ -70,7 +70,6 @@ body{background:var(--cream);color:var(--text);font-family:'Quicksand',sans-seri
 }
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
 
-/* Princesses dancing */
 .princesses{display:flex;gap:40px;margin-top:32px;position:relative;z-index:2;}
 .princess{font-size:3.5rem;animation:dance 1.5s ease-in-out infinite;}
 .princess:nth-child(1){animation-delay:0s;}
@@ -79,7 +78,6 @@ body{background:var(--cream);color:var(--text);font-family:'Quicksand',sans-seri
 .princess:nth-child(4){animation-delay:.9s;}
 @keyframes dance{0%,100%{transform:translateY(0) rotate(-5deg);}50%{transform:translateY(-20px) rotate(5deg);}}
 
-/* Magic wand sweep */
 .wand-sweep{
   position:absolute;inset:0;pointer-events:none;z-index:3;
   background:linear-gradient(90deg,transparent 0%,rgba(249,199,79,.15) 40%,rgba(255,110,180,.25) 50%,rgba(194,100,232,.15) 60%,transparent 100%);
@@ -151,7 +149,7 @@ nav{
   display:flex;align-items:center;justify-content:space-between;
   background:rgba(255,220,240,.96);
   backdrop-filter:blur(24px);
-  border-bottom:2px solid var(--pink-l);
+  border-bottom:2px solid var(--pink);
   box-shadow:0 4px 28px rgba(255,110,180,.25);
 }
 .nav-logo{
@@ -185,14 +183,8 @@ nav{
   background:var(--grad1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   margin-bottom:12px;
 }
-.home-role{
-  font-family:'Dancing Script',cursive;font-size:2.2rem;
-  color:var(--purple);margin-bottom:20px;
-}
-.home-sub{
-  font-size:1.05rem;color:var(--muted);max-width:540px;
-  line-height:1.85;margin:0 auto 48px;font-weight:500;
-}
+.home-role{font-family:'Dancing Script',cursive;font-size:2.2rem;color:var(--purple);margin-bottom:20px;}
+.home-sub{font-size:1.05rem;color:var(--muted);max-width:540px;line-height:1.85;margin:0 auto 48px;font-weight:500;}
 .home-sub strong{color:var(--rose);}
 .home-cta-row{display:flex;gap:50px;justify-content:center;flex-wrap:wrap;margin-bottom:56px;}
 .home-stats{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;}
@@ -236,6 +228,10 @@ nav{
 .fbtn-sm:hover{transform:rotate(22deg) scale(1.18);box-shadow:0 12px 36px rgba(255,110,180,.55);}
 .fbtn-sm.purple{background:linear-gradient(135deg,#c264e8,#9333ea);box-shadow:0 6px 20px rgba(194,100,232,.35);}
 .fbtn-sm.purple:hover{box-shadow:0 12px 36px rgba(194,100,232,.55);}
+.fbtn-sm.green{background:linear-gradient(135deg,#22c55e,#059669);box-shadow:0 6px 20px rgba(34,197,94,.35);}
+.fbtn-sm.green:hover{box-shadow:0 12px 36px rgba(34,197,94,.55);}
+.fbtn-sm.amber{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 6px 20px rgba(245,158,11,.35);}
+.fbtn-sm.amber:hover{box-shadow:0 12px 36px rgba(245,158,11,.55);}
 
 /* ══════════════════ ABOUT ══════════════════ */
 .about-hero{
@@ -290,6 +286,12 @@ nav{
 .proj-card.teal-c::before{background:linear-gradient(135deg,#06b6d4,#0891b2);}
 .proj-card.teal-c{border-color:#b3e8f0;}
 .proj-card.teal-c:hover{border-color:#06b6d4;box-shadow:0 30px 80px rgba(6,182,212,.2);}
+.proj-card.green-c::before{background:linear-gradient(135deg,#22c55e,#059669);}
+.proj-card.green-c{border-color:#b3f0d4;}
+.proj-card.green-c:hover{border-color:#22c55e;box-shadow:0 30px 80px rgba(34,197,94,.2);}
+.proj-card.amber-c::before{background:linear-gradient(135deg,#f59e0b,#d97706);}
+.proj-card.amber-c{border-color:#fde68a;}
+.proj-card.amber-c:hover{border-color:#f59e0b;box-shadow:0 30px 80px rgba(245,158,11,.2);}
 .proj-emoji{font-size:4rem;display:block;margin-bottom:16px;animation:floatRow 3s ease-in-out infinite;}
 .proj-num{font-family:'Dancing Script',cursive;font-size:1rem;color:var(--pink-l);margin-bottom:4px;}
 .proj-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--text);margin-bottom:12px;}
@@ -303,11 +305,10 @@ nav{
 .proj-tag:hover{background:var(--grad1);color:white;border-color:transparent;}
 .proj-tag.purple{background:var(--purple-p);border-color:var(--purple-l);color:var(--purple);}
 .proj-tag.teal{background:#f0feff;border-color:#b3e8f0;color:#0891b2;}
+.proj-tag.green{background:#f0fff4;border-color:#b3f0d4;color:#059669;}
+.proj-tag.amber{background:#fffbeb;border-color:#fde68a;color:#d97706;}
 .proj-links{display:flex;gap:36px;flex-wrap:wrap;align-items:center;position:relative;z-index:10;}
-.proj-deco{
-  position:absolute;right:40px;top:40px;font-size:5rem;opacity:.07;
-  transform:rotate(15deg);pointer-events:none;
-}
+.proj-deco{position:absolute;right:40px;top:40px;font-size:5rem;opacity:.07;transform:rotate(15deg);pointer-events:none;}
 
 /* ══════════════════ SKILLS ══════════════════ */
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
@@ -402,7 +403,6 @@ nav{
   transition:all .3s;position:relative;z-index:10;
 }
 .email-link:hover{transform:scale(1.05);box-shadow:0 10px 30px rgba(0,0,0,.2);}
-/* Contact form */
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
 .form-lbl{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
 .form-inp,.form-ta{
@@ -484,11 +484,9 @@ footer{
 <div id="intro">
   <div class="stars-bg" id="stars-bg"></div>
   <div class="wand-sweep" id="wand-sweep"></div>
-
   <div class="intro-castle">🏰</div>
   <div class="intro-title">Welcome to Gargi's World ✨</div>
   <div class="intro-sub">~ A Fairy Tale of Code & Creativity ~</div>
-
   <div class="princesses">
     <span class="princess">👸</span>
     <span class="princess">🧚‍♀️</span>
@@ -496,9 +494,7 @@ footer{
     <span class="princess">🧚‍♀️</span>
     <span class="princess">👸</span>
   </div>
-
   <div class="intro-progress"><div class="intro-progress-bar" id="progress-bar"></div></div>
-
   <div class="intro-skip" id="skip-btn" onclick="skipIntro()">Skip ✨</div>
 </div>
 
@@ -543,9 +539,9 @@ footer{
       </div>
     </div>
     <div class="home-stats">
-      <div class="stat-pill">3 <span>AI Agents Built 🤖</span></div>
+      <div class="stat-pill">5 <span>AI Agents Built 🤖</span></div>
       <div class="stat-pill">100% <span>Open Source ⭐</span></div>
-      <div class="stat-pill">3 <span>Live Deployments 🚀</span></div>
+      <div class="stat-pill">5 <span>Live Deployments 🚀</span></div>
       <div class="stat-pill">∞ <span>Ideas & Dreams 💜</span></div>
     </div>
   </div>
@@ -592,7 +588,7 @@ footer{
       <div style="background:white;border-radius:20px;padding:28px;text-align:center;border:2px solid var(--pink-l);box-shadow:0 6px 24px rgba(255,110,180,.1);transition:all .3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
         <div style="font-size:2.5rem;margin-bottom:8px;">🤖</div>
         <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:4px;">AI Developer</div>
-        <div style="font-size:.83rem;color:var(--muted);font-weight:500;">3 live AI agents deployed</div>
+        <div style="font-size:.83rem;color:var(--muted);font-weight:500;">5 live AI agents deployed</div>
       </div>
       <div style="background:white;border-radius:20px;padding:28px;text-align:center;border:2px solid var(--pink-l);box-shadow:0 6px 24px rgba(255,110,180,.1);transition:all .3s;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'">
         <div style="font-size:2.5rem;margin-bottom:8px;">🌸</div>
@@ -615,7 +611,7 @@ footer{
   <div class="section-wrap">
     <div class="sec-eyebrow">~ Things I've built ~</div>
     <h2 class="sec-title">AI Agents I've Built 💫</h2>
-    <p class="sec-sub">Three fully deployed AI systems — open source, live on Vercel, built with love 🌸</p>
+    <p class="sec-sub">Five fully deployed AI systems — open source, live on Vercel, built with love 🌸</p>
 
     <!-- Project 1 -->
     <div class="proj-card fade-up">
@@ -683,6 +679,53 @@ footer{
         <span style="font-size:.82rem;color:var(--muted);font-weight:600;align-self:center;">💻 Desktop App</span>
       </div>
     </div>
+
+    <!-- Project 4 -->
+    <div class="proj-card green-c fade-up">
+      <div class="proj-deco">🏥</div>
+      <span class="proj-emoji">🏥</span>
+      <div class="proj-num" style="color:#b3f0d4;">✿ Project 04</div>
+      <h3 class="proj-title">HealthLens Lab</h3>
+      <p class="proj-desc">
+        An AI-powered Medical Report Explainer that lets you upload or paste any lab report and get instant clinical-grade analysis. Auto-detects report type, checks every value against normal ranges, and generates an overall health score across Heart, Blood, Diabetes, Liver and Kidney categories. Supports 12 languages including Hindi & Gujarati, generates personalised doctor questions, flags medication conflicts, and recommends the right specialist — all 100% private, zero data stored. ⚕️
+      </p>
+      <div class="proj-tags">
+        <span class="proj-tag green">🤖 Groq API</span>
+        <span class="proj-tag green">🧠 Llama 3.3-70B</span>
+        <span class="proj-tag green">🌐 12 Languages</span>
+        <span class="proj-tag green">💊 Med Analysis</span>
+        <span class="proj-tag green">📊 Health Score</span>
+        <span class="proj-tag green">🔒 100% Private</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/Patelgargi13/HealthLens" target="_blank" rel="noopener noreferrer" class="fbtn-sm" style="text-decoration:none;">⭐<br>GitHub</a>
+        <a href="https://healthlens-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="fbtn-sm green" style="text-decoration:none;">🚀<br>Live Demo</a>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="proj-card amber-c fade-up">
+      <div class="proj-deco">✈️</div>
+      <span class="proj-emoji">✈️</span>
+      <div class="proj-num" style="color:#fde68a;">✿ Project 05</div>
+      <h3 class="proj-title">TripArchitect</h3>
+      <p class="proj-desc">
+        Your AI-powered personal travel planner! Enter any destination, travel dates, budget and trip style — and Gemini AI crafts a complete day-by-day itinerary with real place names, morning-to-evening activities and local secrets. Features live 7-day weather forecasts, an interactive Leaflet map, a 12-language phrasebook, smart AI-personalised packing lists, budget estimators, emergency contacts and local festival info — all across 9 beautiful tabs. Plan trips to 195+ countries, completely free. 🌍
+      </p>
+      <div class="proj-tags">
+        <span class="proj-tag amber">✈️ Gemini AI</span>
+        <span class="proj-tag amber">🌤️ Live Weather</span>
+        <span class="proj-tag amber">🗺️ Leaflet Maps</span>
+        <span class="proj-tag amber">🗣️ Phrasebook</span>
+        <span class="proj-tag amber">💰 Budget Planner</span>
+        <span class="proj-tag amber">🧳 Packing AI</span>
+      </div>
+      <div class="proj-links">
+        <a href="https://github.com/Patelgargi13/triparchitect" target="_blank" rel="noopener noreferrer" class="fbtn-sm" style="text-decoration:none;">⭐<br>GitHub</a>
+        <a href="https://triparchitect-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" class="fbtn-sm amber" style="text-decoration:none;">🚀<br>Live Demo</a>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -806,7 +849,6 @@ footer{
 
     <div class="contact-wrap">
       <div>
-        <!-- Glam Email Box -->
         <div class="glam-email fade-up">
           <h3>✨ Drop me an email! 💌</h3>
           <p>I read every single email and reply as fast as I can 🌸</p>
@@ -874,6 +916,8 @@ footer{
     <a href="mailto:gargiptl14@gmail.com" class="ft-link">💌 Email</a>
     <a href="https://interview-bot-amber.vercel.app/" target="_blank" rel="noopener noreferrer" class="ft-link">🤖 Interview Bot</a>
     <a href="https://globalnewshub-five.vercel.app/" target="_blank" rel="noopener noreferrer" class="ft-link">📰 News Agent</a>
+    <a href="https://healthlens-tan.vercel.app/" target="_blank" rel="noopener noreferrer" class="ft-link">🏥 HealthLens</a>
+    <a href="https://triparchitect-ochre.vercel.app/" target="_blank" rel="noopener noreferrer" class="ft-link">✈️ TripArchitect</a>
   </div>
   <hr class="ft-divider">
   <div class="ft-copy">Made with <span>💜</span> by Gargi Patel · <span>✨</span> All rights reserved 2025</div>
@@ -937,7 +981,6 @@ class Flower{
   }
 }
 
-// Spawn background flowers continuously
 setInterval(()=>{
   if(flowers.filter(f=>!f.burst).length<6)
     flowers.push(new Flower());
@@ -950,11 +993,8 @@ function animFlowers(){
 }
 animFlowers();
 
-// CLICK BURST
 document.addEventListener('click',e=>{
-  // Spawn flower burst at click point
   for(let i=0;i<14;i++) flowers.push(new Flower(e.clientX,e.clientY,true));
-  // Also show DOM burst emoji
   const burst=document.createElement('div');
   burst.className='click-burst';
   burst.style.cssText=`left:${e.clientX-20}px;top:${e.clientY-20}px;font-size:2rem;`;
@@ -966,7 +1006,6 @@ document.addEventListener('click',e=>{
 // ══════════════════════════════════════════════
 // CINDERELLA INTRO
 // ══════════════════════════════════════════════
-// Generate stars
 const starsEl=document.getElementById('stars-bg');
 for(let i=0;i<120;i++){
   const s=document.createElement('div');
@@ -976,7 +1015,6 @@ for(let i=0;i<120;i++){
   starsEl.appendChild(s);
 }
 
-// Sparkle spawner during intro
 function spawnIntroSparkle(){
   const sp=document.createElement('div');
   sp.className='sparkle-trail';
@@ -987,14 +1025,13 @@ function spawnIntroSparkle(){
 }
 let sparkleInterval=setInterval(spawnIntroSparkle,180);
 
-// Progress bar
 let prog=0;
 const pbar=document.getElementById('progress-bar');
 const progTimer=setInterval(()=>{
   prog+=1;
   pbar.style.width=prog+'%';
   if(prog>=100){clearInterval(progTimer);setTimeout(launchPortfolio,300);}
-},40); // ~4 seconds total
+},40);
 
 function skipIntro(){
   clearInterval(progTimer);clearInterval(sparkleInterval);
@@ -1007,7 +1044,6 @@ function launchPortfolio(){
   const intro=document.getElementById('intro');
   const sweep=document.getElementById('wand-sweep');
   sweep.classList.add('go');
-  // Sparkle flood
   for(let i=0;i<20;i++){
     setTimeout(()=>{
       const sp=document.createElement('div');
@@ -1026,7 +1062,6 @@ function launchPortfolio(){
       nav.style.opacity='1';nav.style.pointerEvents='auto';
       nav.style.transition='opacity .5s ease';
       document.getElementById('main-footer').style.display='block';
-      // Spawn welcome burst
       for(let i=0;i<30;i++) setTimeout(()=>flowers.push(new Flower(Math.random()*fc.width,Math.random()*fc.height,true)),i*40);
     },600);
   },400);
@@ -1040,50 +1075,41 @@ function showPage(id, btn){
   const wand=document.getElementById('trans-wand');
   const txt=document.getElementById('trans-text');
 
-  // Fade in overlay
   overlay.className='transition-overlay go-in';
   wand.style.display='block';txt.style.display='block';
 
   setTimeout(()=>{
-    // Switch pages
     document.querySelectorAll('.page').forEach(p=>p.style.display='none');
     document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
     const target=document.getElementById(id);
     target.style.display='block';
     target.classList.add('active');
 
-    // Update nav
     document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active'));
     if(btn) btn.classList.add('active');
 
-    // Show/hide footer
-    document.getElementById('main-footer').style.display = id==='home' ? 'none' : 'block';
-
-    // Scroll to top
+    document.getElementById('main-footer').style.display = 'block';
     window.scrollTo(0,0);
 
-    // Trigger fade animations
     setTimeout(()=>{
       document.querySelectorAll('#'+id+' .fade-up').forEach((el,i)=>{
         setTimeout(()=>el.classList.add('show'),i*120);
       });
     },100);
 
-    // Fade out overlay
     overlay.className='transition-overlay go-out';
     setTimeout(()=>{
       overlay.className='transition-overlay';
       wand.style.display='none';txt.style.display='none';
     },450);
 
-    // Burst flowers
     for(let i=0;i<10;i++) setTimeout(()=>flowers.push(new Flower(Math.random()*fc.width,fc.height*.4+Math.random()*fc.height*.2,true)),i*60);
 
   },380);
 }
 
 // ══════════════════════════════════════════════
-// SCROLL OBSERVER FOR FADE-UP
+// SCROLL OBSERVER
 // ══════════════════════════════════════════════
 const observer=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
